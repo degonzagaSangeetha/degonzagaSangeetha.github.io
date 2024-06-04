@@ -1,0 +1,46 @@
+.none
+ {
+    border-style: none;
+}
+.hidden {
+    border-style: hidden;
+}
+.dotted {
+    border-style: dotted;
+}
+.dashes {
+    border-style: dashed;
+}
+.solid {
+    border-style: solid;
+}
+.double {
+    border-style: double;
+}
+.groove {
+    border-style: groove;
+}
+.ridge {
+    border-style: ridge;
+}
+.inset {
+    border-style: inset;
+}
+.outset {
+    border-style: outset;
+}
+.mixed {
+    border-style: ridge dashed solid dotted;
+}
+.differ
+{
+    border-top: double;border-left: dotted; border-right: dashed;border-bottom: ridge;border-top-color: blue;border-left-color: rgb(43, 6, 6);
+    border-bottom-color: aquamarine;border-right-color: orchid ;
+}
+span
+{
+    border-top: double;border-left: dotted; border-right: dashed;border-bottom: ridge;border-top-color: blue;border-left-color: rgb(43, 6, 6);
+    border-bottom-color: aquamarine;border-right-color: orchid ;
+    background-color:grey; border-left-width:4px ;border-right-width: 8px; border-top-width:12px ;border-bottom-width:16px ;padding: 15px;
+    border-radius: 5px;
+}

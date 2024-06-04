@@ -1,0 +1,18 @@
+.color
+{
+    color: rgb(0, 255, 34);
+    font-size: 20px;
+}
+.dir
+{
+    direction: rtl;
+}
+.line-ht
+{
+    line-height: 40px;
+    background-color: blueviolet;
+}
+.text-align
+{
+    text-align: center;
+}

@@ -1,0 +1,30 @@
+.card
+{
+    height: 800px;
+    width: 500px;
+    border: 1px solid red;
+    margin: auto;
+    padding:20px;
+}
+.images
+{
+     height:6%;
+     width:20%;
+     margin-left: 40%; 
+}
+
+.btn1
+{
+    background-color: rgb(245, 160, 2);
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    padding: 10px 20px;
+    color: white;
+    margin-left: 30%;
+
+}
+*
+{
+    line-height: 0.7cm;
+}
