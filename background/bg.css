@@ -1,48 +1,65 @@
-.container
-{
-    height: 1200px;
-    width: 1200px;
+.container {
+    height: 500px;
+    width: 1500px;
     border: 1px solid black;
 
 }
 
-.box{
+.container {
+    display: flex;
+    flex-direction: wrap;
 
 }
-.box1
-{
+
+.box {
+    margin: 10px;
+    padding: 20px;
+}
+
+.box1 {
+    /* visibility:hidden; */
+    /* visibility: visible; */
+    /* display: none; */
+    /* display: block; */
     height: 200px;
     width: 200px;
-background-image: url(../images/download.jpg);
+    background-image: url(../images/download.jpg), url(../images/download.gif);
+    /* background-color: blue; */
+    color: white;
 }
-.box2
-{
-    height: 200px;
-    width: 200px;
-background-image: conic-gradient(red, yellow, green);
+
+.box2 {
+    height: 120px;
+    width: 120px;
+    background-image: conic-gradient(red, yellow, green);
 }
-.box3
-{ height: 200px;
-    width: 200px;
+
+.box3 {
+    height: 120px;
+    width: 120px;
     background-image: linear-gradient(rgb(0, 225, 255), rgb(216, 178, 75)30%, green);
 }
-.box4
-{ height: 100px;
-    width: 100px;
+
+.box4 {
+    height: 120px;
+    width: 120px;
     background-image: radial-gradient(rgb(212, 23, 39), yellow, rgb(10, 221, 10));
 }
-.box5
-{ height: 100px;
-    width: 100px;
-    background-image: repeating-conic-gradient(red, yellow, green);
+
+.box5 {
+    height: 120px;
+    width: 120px;
+    background-image: repeating-conic-gradient(rgb(63, 7, 165) 10%, #06f585 20%);
 }
-.box6
-{ height: 100px;
-    width: 100px;
-    background-image: repeating-linear-gradient(red, yellow, green);
+
+.box6 {
+    height: 120px;
+    width: 120px;
+    background-image: repeating-linear-gradient(#c02ba0, yellow 10%, rgb(19, 0, 128) 20%);
 }
-.box7
-{ height: 100px;
-    width: 100px;
-    background-image: repeating-radial-gradient(red, yellow, green);
+
+.box7 {
+    height: 120px;
+    width: 120px;
+    background-image: repeating-radial-gradient(#27ade2, rgb(214, 48, 192), rgb(198, 240, 14));
 }
