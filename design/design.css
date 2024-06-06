@@ -26,9 +26,7 @@
     border: none;
 }
 
-img {
-  
-  float:right;
-  margin-top: 2px;
-
+*
+{
+    display: flex;
 }
