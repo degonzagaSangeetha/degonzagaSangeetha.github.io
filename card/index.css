@@ -1,48 +1,83 @@
 .container {
-    height: auto;
-    width: auto;
+    height: 800px;
+    width: 1600px;
     display: flex;
     text-align: center;
     background-color: #382e2e;
+    justify-content: center;
+    margin: auto;
 }
 
 .box1 {
     height: 520px;
-    width: 350px;
+    width: 320px;
     border: 1px solid rgb(19, 18, 18);
     border-radius: 20px;
     margin: 30px;
+    margin-top: 100px;
     line-height: 0.6cm;
-    box-shadow: 5px 10px 10px 10px #160606;
+    box-shadow: 5px 20px 5px 5px #160606;
     background-color: white;
+    
+    
+
 }
 
 .box2 {
-    height: 500px;
-    width: 200px;
+    height: 600px;
+    width: 360px;
+    border: 1px solid rgb(19, 18, 18);
+    border-radius: 20px;
+    margin: 30px;
+    margin-top: 50px;
+    line-height: 0.6cm;
+    box-shadow: 5px 30px 10px 10px #160606;
+    background-color: white;
 }
 
 .box3 {
-    height: 500px;
-    width: 200px;
+    height: 520px;
+    width: 320px;
+    border: 1px solid rgb(19, 18, 18);
+    border-radius: 20px;
+    margin: 30px;
+    margin-top: 100px;
+    line-height: 0.6cm;
+    box-shadow: 5px 20px 5px 5px #160606;
+    background-color: white;
 }
 
 .prop {
     display: flex;
-    padding-top: 5%;
+
     justify-content: center;
     color: white;
-
-    background-color: rgb(247, 2, 125);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    
 }
 
-/* .btn{
-    height: 35px;
-    width: 10px;
+.prop1{
+    background-color: rgb(247, 2, 125);
+    height: 90px;
+    width:320px;
+}
+    
+.prop2{
    
-} */
+    background-color: rgb(247, 71, 2);
+   
+    height: 90px;
+    width:360px;
+}
+
+ 
+.prop3{
+    background-color: rgb(96, 233, 62);
+    height: 90px;
+    width:320px;
+}
+
 img {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -50,4 +85,15 @@ img {
 
 * {
     font-family: sans-serif;
+}
+
+.btn
+{
+padding-top: 0.5cm;
+width:150px;
+
+}
+.btn1
+{
+    border-right:1px inset #918c8c;
 }
