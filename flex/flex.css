@@ -1,0 +1,93 @@
+.main-container {
+    height: auto;
+    width: auto;
+    border: 1px solid red;
+}
+
+.container {
+    height: 200px;
+    width: 500px;
+    border: 1px solid red;
+    display: flex;
+}
+.container1
+{
+    flex-direction: row;
+}
+
+.container2
+{
+    flex-direction: row-reverse;
+}
+.container3
+{
+    flex-direction: column;
+}
+.container4
+{
+    flex-direction: column-reverse;
+}
+.container5
+{
+    column-gap: 10px;
+}
+.container6
+{
+    flex-direction: column;
+    row-gap: 10px;
+}
+.container7
+{
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.container8
+{
+    flex-wrap: nowrap;
+}
+.container9
+{
+    flex-wrap: wrap-reverse;
+}
+.container10
+{
+    justify-content: start;
+}
+.container11
+{
+    justify-content: center;
+}
+.container12
+{
+    justify-content: end;
+}
+.container13
+{
+    justify-content: space-between;
+}
+.container14
+{
+    justify-content: space-around;
+}
+
+.container15
+{
+    justify-content: space-evenly;
+}
+.container16
+{
+    align-items: flex-start;
+}
+.container17
+{
+    align-items: center;
+}
+.container18
+{
+    align-items: flex-end;
+}
+.box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid blue;
+}

@@ -1,0 +1,23 @@
+.nav-container
+{
+    width: auto;
+    height: auto;
+ display:flex;
+ border: 1px solid red; 
+ justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+nav ul
+{
+    display: flex;
+    list-style-type: none;
+ gap: 100px;
+    
+}
+.btn
+{
+height: 100px;
+width: 100px;
+}
