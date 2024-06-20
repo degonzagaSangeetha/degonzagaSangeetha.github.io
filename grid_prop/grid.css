@@ -1,0 +1,15 @@
+.main-container
+{
+  
+    border: 1px solid none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 50px;
+}
+.box
+{
+    padding: 20px;
+    height: 150px;
+    border: 1px solid blue;
+}
