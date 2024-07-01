@@ -1,0 +1,47 @@
+.main-container{
+    height: 500px;
+    width:500px;
+    border: 1px solid black;
+    padding: 20px;
+    position: relative;
+}
+*{
+    font-size: large;
+}
+.btn1
+{
+width:150px ;
+height: 50px;
+background-color:white;
+border-radius: 5px;
+position: relative;
+left:350px;
+}
+.icn{
+    position: absolute;
+    right: 15px;
+}
+.btn2
+{
+width:150px ;
+height: 50px;
+background-color: rgb(122, 207, 233);
+border: none;
+border-radius: 5px;
+position: absolute;
+left: 100px;
+
+}
+.pwd-container{
+    position:relative;
+
+}
+.pwd-icon{
+    right: 0;
+}
+.wsh{
+    position: relative;
+}
+.num{
+    background-image: url(/images/icons8-number-1-30.png);
+}
