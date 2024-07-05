@@ -1,0 +1,26 @@
+
+.main-container{
+
+    width :50%;
+    border:1px solid none;
+    background-color: rgb(230, 241, 243);
+    position: relative;
+    left:25%;
+    padding:20px;
+}
+
+img{
+    height:30px;
+    width: 30px;
+}
+.side-heading{
+position: relative;
+left: 50%;
+}
+.secondary-container{
+    background-color: white;
+}
+.btn1
+.save
+.message
+.bold-message
