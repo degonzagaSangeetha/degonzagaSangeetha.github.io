@@ -1,26 +1,91 @@
+.main-container {
 
-.main-container{
-
-    width :50%;
-    border:1px solid none;
+    width: 35%;
+    border: 1px solid none;
     background-color: rgb(230, 241, 243);
-    position: relative;
-    left:25%;
-    padding:20px;
+    margin: auto;
+    padding: 20px;
+
+
 }
 
-img{
-    height:30px;
+.img-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.gr {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+img {
+    height: 30px;
     width: 30px;
 }
-.side-heading{
-position: relative;
-left: 50%;
+
+.side-heading {
+
+    color: rgb(52, 186, 150);
+    font-weight: 500;
+    font-size: 14px;
 }
-.secondary-container{
+
+.secondary-container {
     background-color: white;
+    padding: 50px;
+
 }
-.btn1
-.save
-.message
-.bold-message
+
+.btn1 {
+    background-color: rgb(228, 201, 115);
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    margin: auto;
+    font-weight: 600;
+    color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.save {
+    font-weight: 700;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.message {
+    color: rgb(63, 62, 62);
+    font-weight: 400;
+    padding: 10px;
+}
+
+.msg-container {
+    width: 400px;
+    margin: auto;
+}
+
+.bold-message {
+    color: rgb(44, 44, 44);
+    font-weight: 700;
+    padding: 10px;
+}
+
+.btn2 {
+    background-color: rgb(52, 186, 150);
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 10px;
+    width: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
