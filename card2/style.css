@@ -1,0 +1,49 @@
+.main-con
+{
+    height: 800px;
+    width: 550px;
+    margin: auto;
+}
+ .first-con{
+    height: 500px;
+    background-color: rgb(230, 230, 236);
+ }
+ h1{
+    text-align: center;
+    font-size: large;
+    font-family: sans-serif;
+    padding: 20px;
+ }
+.btn-con {
+  display: grid;
+  justify-content: center;
+}
+.btn{
+    width: 400px;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+.btn-apply{
+    width: 100px;
+    background-color: orange;
+    color: white;
+    border: none;
+
+   
+}
+.sec-con{
+padding: 20px;
+}
+.para{
+    font-size: medium;
+}
+.para-bold{
+    font-weight: 400;
+}
+.btn-reg {
+    width: 100px;
+    background-color: orange;
+    color: white;
+    border: none;
+}

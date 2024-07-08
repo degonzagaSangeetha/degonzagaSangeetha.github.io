@@ -1,0 +1,42 @@
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: blueviolet;
+    animation: myanime 5s linear infinite alternate;
+    position: relative;
+    display: grid;
+  
+   
+}
+@keyframes myanime {
+0%
+{
+    left: 0%;
+}
+25%{
+    left :25%;
+    background-color: blue;
+}
+50%{
+    left:50%;
+    background-color: aqua;
+}
+75%{
+left: 75%;
+    background-color: wheat;
+}
+100%{
+    left: 100%;
+    background-color: white;
+}
+}
+/* .btn{
+    padding: 20px;
+    border-radius: 55px;
+    margin: auto;
+    background-color:green;
+    color: white;
+    border: none;
+    display: flex;
+    text-align: center;
+} */
