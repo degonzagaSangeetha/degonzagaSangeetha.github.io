@@ -1,0 +1,43 @@
+.my-box {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  color: pink;
+}
+
+nav ul {
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.cls-1, .cls-4, .cls-3, .cls-2 {
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+  border: 1px solid blue;
+  background-color: aqua;
+}
+
+.cls-2 {
+  border: 1px solid rebeccapurple;
+  background-color: rgb(4, 255, 0);
+}
+
+.cls-3 {
+  background-color: black;
+  color: white;
+}
+
+.cls-4 {
+  background-color: bisque;
+}
+
+.paragraph {
+  color: pink;
+  background-color: gray;
+  line-height: 10px;
+  height: 100px;
+}/*# sourceMappingURL=demo.css.map */

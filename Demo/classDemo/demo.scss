@@ -1,0 +1,56 @@
+
+@import '../classDemo/myvar';
+.my-box{
+    height: 100px;
+    width: 100px;
+    background-color: $background;
+    color: $fontColor;
+}
+
+
+//nested
+nav{
+    ul{
+        list-style: none;
+    }
+    li{
+        display: inline-block;
+        padding: 10px;
+    }
+}
+
+// inheritance
+.cls-1{
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    border: 1px solid blue;
+    background-color: aqua
+}
+.cls-2{
+    @extend .cls-1;
+    border: 1px solid rebeccapurple;
+    background-color: rgb(4, 255, 0)
+}
+.cls-3{
+    @extend .cls-1;
+    background-color: black;
+    color: white;
+}
+.cls-4{
+    @extend .cls-1;
+    background-color: bisque;
+}
+
+//mixins
+
+@mixin paraStyle{
+    color: pink;
+    background-color: gray;
+    line-height: 10px;
+    height: 100px;
+    
+}
+.paragraph{
+    @include paraStyle;
+}
