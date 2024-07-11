@@ -1,38 +1,48 @@
-.main-con
-{
+.main-con {
     height: 800px;
     width: 550px;
     margin: auto;
 }
- .first-con{
+
+.first-con {
     height: 530px;
     background-color: rgb(230, 230, 236);
- }
- h1{
+}
+
+h1 {
     text-align: center;
     font-size: 20px;
     font-weight: 800;
     font-family: sans-serif;
     padding: 20px;
     letter-spacing: 3px;
- }
+}
+
 .btn-con {
-  display: grid;
-  justify-content: center;
-  grid-gap: 20px;
-  align-items: center;
+    display: grid;
+    justify-content: center;
+    grid-gap: 20px;
+    align-items: center;
 }
-.box{
+
+.box {
     height: 40px;
-    width: 60px;
+    width: 40px;
     border-radius: 10px;
-    background-color:orange ;
-   text-align: center;
+    background-color: orange;
+    text-align: center;
+    align-content: center;
+
 }
-.btn{
+
+.btn-para {
+    width: 300px;
+}
+
+.btn {
     width: 450px;
     height: 100px;
-    background-color: blue;
+    background-color: rgb(59, 59, 186);
     color: white;
     border: none;
     padding: 20px;
@@ -42,13 +52,16 @@
     display: flex;
     column-gap: 50px;
     text-align: left;
+
 }
-.btn-gap{
+
+.btn-gap {
     padding: 20px;
 }
-.btn-apply{
+
+.btn-apply {
     width: 170px;
-    background-color: orange;
+    background-color: rgb(241, 153, 38);
     color: white;
     border: none;
     margin: auto;
@@ -59,20 +72,24 @@
     padding: 10px;
     border-radius: 8px;
     gap: 10px;
-   
+
 }
-.sec-con{
-padding: 10px;
+
+.sec-con {
+    padding: 10px;
 }
-.para{
+
+.para {
     font-size: medium;
 }
-.para-bold{
+
+.para-bold {
     font-weight: 600;
 }
+
 .btn-reg {
     width: 120px;
-    background-color: orange;
+    background-color: rgb(241, 153, 38);
     color: white;
     border: none;
     margin: auto;
@@ -82,6 +99,6 @@ padding: 10px;
     font-weight: 600;
     padding: 10px;
     border-radius: 5px;
- 
-  
+
+
 }
