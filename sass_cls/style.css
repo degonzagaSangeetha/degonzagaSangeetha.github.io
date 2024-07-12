@@ -1,0 +1,24 @@
+.box1, .box2 {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+}
+
+.box2 {
+  background-color: purple;
+}
+
+.para {
+  background-color: blue;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+}
+nav li {
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 700;
+}/*# sourceMappingURL=style.css.map */

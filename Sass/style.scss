@@ -3,3 +3,26 @@
     background-color: red;
     font-size: $font;
 }
+
+// nested
+nav{
+    ul{
+        list-style: none;
+    }
+    li{
+        display: inline-block;
+        padding: 10px;
+    }
+}
+
+// inheritance
+
+.inner-child1{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+.inner-child2{
+    @extend .inner-child1;
+    background-color: blue;
+}

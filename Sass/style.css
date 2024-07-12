@@ -1,4 +1,22 @@
 .para {
   background-color: red;
   font-size: 30px;
+}
+
+nav ul {
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.inner-child1, .inner-child2 {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
+
+.inner-child2 {
+  background-color: blue;
 }/*# sourceMappingURL=style.css.map */

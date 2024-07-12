@@ -1,0 +1,36 @@
+@import "./var.scss";
+
+
+.box1 {
+    height: 200px;
+    width: 200px;
+    background-color: $color;
+}
+
+.box2 {
+    @extend .box1;
+    background-color: purple;
+}
+
+@mixin parastyle {
+
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+.para {
+    background-color: $bgcolor;
+    @include parastyle;
+}
+
+nav {
+    ul {
+        list-style: none;
+    }
+
+    li {
+        padding: 10px;
+        @include parastyle;
+    }
+}
