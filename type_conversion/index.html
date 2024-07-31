@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Implicit or type coercion
+        var a = '3' + 2;
+        console.log("No. '3'+2 changed automatically to " + a + " " + typeof a)
+        var b = '3' * 2;
+        console.log("String '3' changed to no. automatically " + b + " " + typeof b)
+        var c = true + 2;
+        console.log("Boolean true changed to no. automatically " + c + " " + typeof c)
+        var d = (0 == false)
+        console.log("No. 0 changed to boolean automatically " + d + " " + typeof d)
+        //Explicit
+        var num = Number('3')
+        console.log("String '3' changed manually to " + num + " " + typeof num)
+        var e = Boolean(0)
+        console.log("No. 0 changed manually to " + e + " " + typeof e)
+        var f = String(true)
+        console.log("Boolean true changed manually to " + f + " " + typeof f)
+    </script>
+</body>
+
+</html>

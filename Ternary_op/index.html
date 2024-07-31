@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Question 1: Check if a number is even or odd.
+        var a = 15
+        var res = (a % 2 == 0 ? "even" : "odd")
+        console.log(`${a} is ` + res)
+        // Question 2: Find the maximum of two numbers.
+        let b = 10
+        var max = (a > b ? a : b)
+        console.log(`${max} is max of two nos.`)
+        // Question 3: Check if a year is a leap year.
+        const year = 2000
+        var leap_year = (year % 4 == 0 ? "a leap year" : "not a leap year")
+        console.log(`${year} is ` + leap_year)
+        // Question 4: Check if a number is positive, negative, or zero.
+        var d = -51
+        var num = (d > 0 ? "positive" : (d == 0 ? "Zero" : "negative"))
+        console.log(`${d} is ` + num)
+        // Question 6: Check if a number is a multiple of both 3 and 5.
+        var mul = (a % 3 == 0 ? (a % 5 == 0 ? "multiple of 3 and 5" : "not multiple of 5") : "not multiple of 3 and 5")
+        console.log(`${a} is ` + mul)
+        // Question 7: Check if a given year is a century year (ends with 00).
+        century_year = (year % 100 == 0) ? "a century year" : "not a century year"
+        console.log(`${year} is ` + century_year)
+        // Question 8: Find the sign of a given number (+, - or 0).
+        var num_sign = (d > 0 ? "+" : (d == 0 ? "0" : "-"))
+        console.log(`${d} is ` + num_sign)
+        // Question 9: Check if a person can vote based on their age (18 or older)
+        let age = 10
+        var vote = (age >= 18 ? "eligible for voting" : "not eligible for voting")
+        console.log(`The person is ` + vote)
+    </script>
+</body>
+
+</html>
