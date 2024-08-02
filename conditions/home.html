@@ -9,56 +9,98 @@
 
 <body>
     <script>
-         var a = parseInt(prompt("Enter value for a:"))
+
+        //         1) check if the number is odd or even.
+        var a = parseInt(prompt("Enter value for a:"))
         if (a % 2 == 0) {
             console.log(`${a} is even number`)
         }
         else {
             console.log(`${a} is odd number`)
         }
-        let num1=parseInt(prompt("Enter value for num1:"))
-        let num2=parseInt(prompt("Enter value for num2:"))
-        if(num1>b){
+
+        // 2) compare 2 numbers and display the largest number.
+        let num1 = parseInt(prompt("Enter value for num1:"))
+        let num2 = parseInt(prompt("Enter value for num2:"))
+        if (num1 > b) {
             console.log(`${num1} is greater than {num2}`)
-             
         }
-    else
-    {
-        console.log(`${num2} is greater than ${num1}`)
-    }
-    let month=prompt("Enter a month:")
-if(month=="January"||month=="February"||month=="December")
-{
-    console.log(`${month} is Winter month`)
+        else {
+            console.log(`${num2} is greater than ${num1}`)
+        }
+        // 3) write a program that calculate the grade with use of given percentage.
+        const mark = parseInt(prompt("Enter your mark:"))
+        if (mark >= 80) {
+            console.log("A grade");
+        }
+        else if (mark >= 60 && mark < 80) {
+            console.log("B grade");
+        }
+        if (mark >= 40 && mark < 60) {
+            console.log("c grade");
+        }
+        else {
+            console.log("Fail, Better luck next time");
+        }
+        //4) determines the type of triangle based on the side length.
+        var l1 = parseInt(prompt("Enter first length:"))
+        var l2 = parseInt(prompt("Enter second length:"))
+        var l3 = parseInt(prompt("Enter third length:"))
+        if (l1 == l2 && l2 == l3) {
+            console.log("It is a Equilateral Triangle");
+        }
+        else if (l1 == l2 || l2 == l3) {
+            console.log("It is a  Isosceles Triangle");
+        }
+        else {
+            console.log("It is a  Scalene Triangle");
+        }
 
-}
-else if(month=="March"||month=="April"||month=="May")
-{
-    console.log(`${month} is Spring month`)
+        // 5) determines the season, based on a given month
+        let month = prompt("Enter a month:")
+        if (month == "January" || month == "February" || month == "December") {
+            console.log(`${month} is Winter month`)
 
-}
-else if(month=="June"||month=="July"||month=="August")
-{
-    console.log(`${month} is Summer month`)
-  
-}
-else{
-    console.log(`${month} is Autumn month`)
+        }
+        else if (month == "March" || month == "April" || month == "May") {
+            console.log(`${month} is Spring month`)
 
-}
-var b = parseInt(prompt("Enter value for b:"))
-    if(b>0)
-    {
-        console.log(`${b} is positive`)
-    }
-    else if(b==0){
-        console.log(`${b} is 0`)
-    }
-    else
-    {
-        console.log(`${b} is negative`)
-    }
-    
+        }
+        else if (month == "June" || month == "July" || month == "August") {
+            console.log(`${month} is Summer month`)
+
+        }
+        else {
+            console.log(`${month} is Autumn month`)
+
+        }
+
+        // 6) check if the number is positive or negative using prompt().
+        var b = parseInt(prompt("Enter value for b:"))
+        if (b > 0) {
+            console.log(`${b} is positive`)
+        }
+        else if (b == 0) {
+            console.log(`${b} is 0`)
+        }
+        else {
+            console.log(`${b} is negative`)
+        }
+
+        // 7) check three persons salary and display the minimum salary .
+
+        var s1 = parseInt(prompt("Enter first person salary:"))
+        var s2 = parseInt(prompt("Enter second person salary:"))
+        var s3 = parseInt(prompt("Enter third person salary:"))
+        if (s1 < s2 && s1 < s3) {
+            console.log("First person has minimum salary");
+        }
+        else if (s2 < s1 && s2 < s3) {
+            console.log("Second person has minimum salary");
+        }
+        else {
+            console.log("Third person has minimum salary");
+        }
     </script>
 </body>
 
