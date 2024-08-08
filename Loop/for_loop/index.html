@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1-15
+        for (let i = 1; i < 16; i++) {
+            console.log(i);
+        }
+        //6-29 odd
+        for (let b = 6; b <= 29; b++) {
+            if (b % 2 != 0)
+                console.log(b)
+        }
+        //20-40 even
+        for (let c = 20; c <= 40; c++) {
+            if (c % 2 == 0)
+                console.log(c)
+        }
+        //1-45 3*5
+        for (var t = 1; t <= 45; t++) {
+            if (t % 3 == 0) {
+                {
+                    console.log("Divisible by 3");
+                }
+                if (t % 5 == 0) {
+                    console.log("Divisible by 5 & 3");
+                }
+            }
+            if (t % 5 == 0) {
+                console.log("Divisible by 5");
+            }
+        }
+
+        // sum 1-100
+        let sum = 0;
+        var count = 100;
+        for (let j = 1; j <= count; j++) {
+            sum += j
+        }
+        console.log(sum)
+        // factorial
+        var number = parseInt(prompt("Enter a number to find it's factorial"))
+        var fact = 1;
+        for (let z = 1; z <= number; z++) {
+            fact *= z
+        }
+        console.log(fact)
+        // fibonacci series
+        let num = parseInt(prompt("Enter a number"))
+        let first_num = 0;
+        let second_num = 1;
+        var third_num;
+        for (let y = 1; y <= num; y++) {
+            console.log(first_num);
+            third_num = first_num + second_num;
+            first_num = second_num;
+            second_num = third_num;
+        }
+
+    </script>
+
+</body>
+
+</html>
