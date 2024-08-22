@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num = [4, 56, 36, 9, 24]
+        for (let i = 0; i < num.length; i++) {
+            console.log(num[i])
+        }
+        var smaller = num[0];
+
+        for (let j = 1; j < num.length; j++) {
+
+            if (num[j] < smaller) {
+                smaller = num[j];
+            }
+        }
+        console.log("the smallest number is", smaller)
+        var larger = num[0];
+
+        for (let k = 1; k < num.length; k++) {
+
+            if (num[k] > larger) {
+                larger = num[k];
+            }
+        }
+        console.log("the largest number is", larger)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const fruits = ["banana", "grapes", "apple"]
+        console.log("Length of the array : ", fruits.length);
+        console.log("toString method : ", fruits.toString());
+        console.log("at method first index : ", fruits.at(1));
+        console.log("join with or the elements : ", fruits.join(" or "));
+        console.log("pop method removes last index : ", fruits.pop());
+        console.log("after popped : ", fruits)
+        console.log("push method adds in last index : ", fruits.push("Cherry"));
+        console.log("after pushed : ", fruits)
+        console.log("shift method removes first index : ", fruits.shift());
+        console.log("after shifted : ", fruits)
+        console.log("unshift method adds in first index : ", fruits.unshift("Kiwi"));
+        console.log("after unshifted : ", fruits)
+        const veggies = ["Lemon", "coconut"]
+        console.log("concat two arrays : ", fruits.concat(veggies));
+        const numbers = [[1, 2], [3, 4]]
+        console.log("flat method : ", numbers.flat());
+        console.log("Splice methods : ", fruits.splice(2, 0, "Mango"));
+        console.log("after spliced : ", fruits)
+        console.log("Slice methods : ", fruits.slice(2));
+
+
+    </script>
+</body>
+
+</html>
