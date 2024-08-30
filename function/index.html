@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    let user = [{ name: "aaa", dob: 2000 }, { name: "bbb", dob: 2001 }, { name: "ccc", dob: 2002 }, { name: "ddd", dob: 2003 }, { name: "eee", dob: 2004 }, { name: "fff", dob: 2005 }, { name: "ggg", dob: 2006 }, { name: "hhh", dob: 2007 }, { name: "iii", dob: 2008 }, { name: "jjj", dob: 2009 }, { name: "kkk", dob: 2010 }]
+    function validate(fname, fdob) {
+
+      let isThere =false;
+      for (let i = 0; i < user.length; i++) {
+         let users=user[i];
+         if(users["name"] === fname && users["dob"] === fdob){
+       isThere=true;
+         }
+  
+      }
+      console.log(isThere ? "user found" :"user not found")
+    }
+  validate("kkk", 2010)
+
+  </script>
+<!-- 
+  a=12
+  i=10
+  for(i=1; i<=10;i++)
+  a*i -->
+</body>
+
+</html>
