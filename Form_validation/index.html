@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="validation.js"></script>
+    <label>Name:</label>
+    <input type="text" id="uName">
+    <p class="error" id="uName_err"></p>
+    <label>Gender:<label>
+        <label>Male</label>
+        <input type="radio" id="male" name="gen" value="1">
+        <label>Female</label>
+        <input type="radio" id="female" name="gen" value="2">
+    <p class="error" id="male"></p>
+    <p class="error" id="female"></p>
+    <label>Phone no.:<label>
+        <input type="text" id="uPhone">
+    <p class="error" id="uPhone_err"></p>
+            <label>Email id:<label>
+                <input type="text" id="uEmail">
+    <p class="error" id="uEmail_err"></p>
+                    <label>Password:<label>
+                        <input type="text" id="uPwd">
+    <p class="error" id="uPwd_err"></p>
+                            <label>Address:<label>
+                                <textarea id="uAdrs"></textarea>
+    <p class="error" id="uAdrs_err"></p>
+                                    <label>Pincode:<label>
+                                        <input type="text" id="uPin">
+    <p class="error" id="uPin_err"></p>
+                                            <label>Profile Image<label><br>
+                                            
+                                                <label>Select a file:</label>
+<input type="file" id="uFile"><br><br>
+                                                <button type="button" onclick="validate()">Submit</button>
+</body>
+
+</html>
