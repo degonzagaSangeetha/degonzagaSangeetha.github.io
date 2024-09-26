@@ -21,11 +21,7 @@ let error_pin=document.getElementById("uPin_err")
     if(user_name==""){
         error_name.textContent="Enter a name"
     }
-    // else if(user_name!=""){
-    //     let pattern = [0-9];
-    //     pattern.test(user_name);
-    //  error_name.textContent="Name must contain only alphabets"
-    // }
+
     else{
         let namePattern = /^[A-Za-z]+$/;
         if (!namePattern.test(user_name)) {
@@ -37,6 +33,12 @@ let error_pin=document.getElementById("uPin_err")
     }
     if(user_phone==""){
         error_phone.textContent="Enter a Phone number"
+    }
+    else{
+        let numPattern = /^[0-9]{10}$/;
+        if (!numPattern.test(user_phone)) {
+            error_phone.textContent = "Phone number must contain only numbers";
+        }
     }
     if(user_email==""){
         error_email.textContent="Enter a email id"

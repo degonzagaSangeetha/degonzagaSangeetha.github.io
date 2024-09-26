@@ -1,0 +1,23 @@
+.main-container{
+    height: 500px;
+    width: 1000px;
+    border: 1px solid black;
+    
+    
+}
+.nav-bar{
+    height: 30px;
+    width: 100%;
+    border: 1px solid rgb(24, 24, 54);
+    background-color: rgb(24, 24, 54);
+    font-size: 20px;
+    color: white;
+}
+.title-bar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-container{
+    display: flex;
+}
