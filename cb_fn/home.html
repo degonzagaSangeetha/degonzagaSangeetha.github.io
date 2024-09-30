@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(x,y,sb,ml,dv){//higher order function
+            res=x+y
+            console.log(res, "add");
+            sb(res) 
+            ml(res)   
+            dv(res)     //call back function 
+        }
+        function sub(val){
+            var sub_value=val-10
+            console.log(sub_value,"subtract");
+        }
+        function mul(val){
+            var mul_value=val*10
+            console.log(mul_value,"multiply");
+        }
+        function div(val){
+            var div_value=val/10
+            console.log(div_value,"divide");
+        }
+        add(12,12,sub,mul,div)
+    </script>
+</body>
+</html>

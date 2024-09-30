@@ -1,20 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <table border="1" cellpadding="20" id="data-table">
-        <thead>
-          <tr>
-            <th>id</th>
-            <th>First</th>
-            <th>Last</th>
-            <th>Username</th> 
-          </tr></thead>
-          <tbody></tbody>
+  </head>
+  <body>
+    <div>
+      <lable>FirstName:</lable>
+      <input type="text" id="f_name" />
+      <br /><br />
+      <lable>LastName:</lable>
+      <input type="text" id="l_name" /><br /><br />
+      <lable>Email:</lable>
+      <input type="text" id="email" /><br /><br />
+      <lable>Mobile:</lable>
+      <input type="text" id="mobile" /><br /><br />
+      <button type="button" onclick="submit()">Submit</button><br /><br />
+
+      <section>
+        <table border="1" cellpadding="20">
+            <thead>
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Action</th>
+                  </tr>
+            </thead>
          
-</body>
+            <tbody id="tableBody">
+
+            </tbody>
+        
+        </table>
+      </section>
+    </div>
+
+    <script>
+      function submit() {
+
+        var fName = document.getElementById('f_name').value
+        var lName = document.getElementById('l_name').value
+        var email = document.getElementById('email').value
+        var mobile = document.getElementById('mobile').value
+
+        
+
+        var data = {
+            firstName: fName,
+            lastName: lName,
+            email:email,
+            mobile:mobile
+        }
+        console.log(data,"data");
+        
+
+        var getLocalData = JSON.parse(localStorage.getItem("userDetails"))  || []
+
+        var editIndex = document.getElementById('f_name').getAttribute('data-edit-index');
+
+if (editIndex !== null) {
+    // Update the data
+    getLocalData[editIndex] = data;
+    document.getElementById('f_name').removeAttribute('data-edit-index');
+} else {
+    // Add new data
+    getLocalData.push(data);
+}
+
+  
+        localStorage.setItem("userDetails",JSON.stringify(getLocalData))
+
+     
+        displayData()
+      }
+
+      function displayData() {
+        var getLocalData = JSON.parse(localStorage.getItem("userDetails")) || [];
+
+        var tableBody = document.getElementById('tableBody');
+        tableBody.innerHTML = ''; // Clear any existing rows
+
+        getLocalData.forEach(function(user, index) {
+          var row = `
+            <tr>
+              <td>${user.firstName}</td>
+              <td>${user.lastName}</td>
+              <td>${user.email}</td>
+              <td>${user.mobile}</td>
+              <td><button type="button" onclick=edit(${index})>Edit</button>
+                <button type="button" onclick=deleterecord(${index})>Delete</button></td>
+            </tr>
+          `;
+          tableBody.innerHTML += row;
+        });
+      }
+      function edit(index) {
+        console.log("index",index);
+        
+            var getLocalData = JSON.parse(localStorage.getItem("userDetails"));
+            var user = getLocalData[index];
+            console.log("user",user);
+        
+            
+            document.getElementById('f_name').value = user.firstName;
+            document.getElementById('l_name').value = user.lastName;
+            document.getElementById('email').value = user.email;
+            document.getElementById('mobile').value = user.mobile;
+            document.getElementById('f_name').setAttribute('data-edit-index', index);
+        }
+
+        // Function to delete a record
+        function deleterecord(index) {
+            var getLocalData = JSON.parse(localStorage.getItem("userDetails"));
+            getLocalData.splice(index, 1);
+            localStorage.setItem("userDetails", JSON.stringify(getLocalData));
+            displayData();
+        }
+        document.addEventListener('DOMcontentloaded', displayData);
+    </script>
+  </body>
 </html>

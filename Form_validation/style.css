@@ -1,3 +1,30 @@
 .error{
     color: red;
 }
+.form{
+    height: 650px;
+    width: 500px;
+    border: 1px solid none;
+    padding-left: 100px;
+    padding-top: 50px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(2px);
+}
+.bg{
+    background-image:url("img.png") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+button {
+    padding: 10px 15px;
+    background-color: #090f41;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background-color:transparent;
+}

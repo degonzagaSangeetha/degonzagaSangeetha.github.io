@@ -7,17 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="validation.js"></script>
+    
+    <div class="bg">
+    <form class="form" id="form">
+       
     <label>Name:</label>
     <input type="text" id="uName">
     <p class="error" id="uName_err"></p>
     <label>Gender:<label>
         <label>Male</label>
-        <input type="radio" id="male" name="gen" value="1">
+        <input type="radio" id="male" name="gen" value="male">
         <label>Female</label>
-        <input type="radio" id="female" name="gen" value="2">
-    <p class="error" id="male"></p>
-    <p class="error" id="female"></p>
+        <input type="radio" id="female" name="gen" value="female">
+    <p class="error" id="errorMessage"></p>
+   
     <label>Phone no.:<label>
         <input type="text" id="uPhone">
     <p class="error" id="uPhone_err"></p>
@@ -36,8 +39,12 @@
                                             <label>Profile Image<label><br>
                                             
                                                 <label>Select a file:</label>
-<input type="file" id="uFile"><br><br>
-                                                <button type="button" onclick="validate()">Submit</button>
+<input type="file" id="uFile">
+<p class="error" id="uFile_err"></p>
+                                                <button type="submit" onclick="validate()">Submit</button>
+                                                <p id="success"></p>
+                                             </form></div> 
+                                             <script src="validation.js"></script>
 </body>
 
 </html>
