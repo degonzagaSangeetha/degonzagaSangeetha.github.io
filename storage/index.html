@@ -3,37 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <style>
+      .error { color: red;}
+    </style>
   </head>
   <body>
     <div>
-      <lable>FirstName:</lable>
+      <label>First Name:</label>
       <input type="text" id="f_name" />
+      <span class="error" id="f_name_error"></span>
       <br /><br />
-      <lable>LastName:</lable>
-      <input type="text" id="l_name" /><br /><br />
-      <lable>Email:</lable>
-      <input type="text" id="email" /><br /><br />
-      <lable>Mobile:</lable>
-      <input type="text" id="mobile" /><br /><br />
-      <button type="button" onclick="submit()">Submit</button><br /><br />
+      
+      <label>Last Name:</label>
+      <input type="text" id="l_name" />
+      <span class="error" id="l_name_error"></span>
+      <br /><br />
+      
+      <label>Email:</label>
+      <input type="text" id="email" />
+      <span class="error" id="email_error"></span>
+      <br /><br />
+      
+      <label>Mobile:</label>
+      <input type="text" id="mobile" />
+      <span class="error" id="mobile_error"></span>
+      <br /><br />
+      
+      <button type="button" onclick="submit()">Submit</button>
+      <br /><br />
 
       <section>
         <table border="1" cellpadding="20">
-            <thead>
-                <tr>
-                    <th>FirstName</th>
-                    <th>LastName</th>
-                    <th>Email</th>
-                    <th>Mobile</th>
-                    <th>Action</th>
-                  </tr>
-            </thead>
-         
-            <tbody id="tableBody">
-
-            </tbody>
-        
+          <thead>
+            <tr>
+              <th>FirstName</th>
+              <th>LastName</th>
+              <th>Email</th>
+              <th>Mobile</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
         </table>
       </section>
     </div>
@@ -41,85 +51,124 @@
     <script>
       function submit() {
 
-        var fName = document.getElementById('f_name').value
-        var lName = document.getElementById('l_name').value
-        var email = document.getElementById('email').value
-        var mobile = document.getElementById('mobile').value
+        var fName = document.getElementById('f_name').value.trim();
+        var lName = document.getElementById('l_name').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var mobile = document.getElementById('mobile').value.trim();
 
-        
 
-        var data = {
-            firstName: fName,
-            lastName: lName,
-            email:email,
-            mobile:mobile
-        }
-        console.log(data,"data");
-        
-
-        var getLocalData = JSON.parse(localStorage.getItem("userDetails"))  || []
-
-        var editIndex = document.getElementById('f_name').getAttribute('data-edit-index');
-
-if (editIndex !== null) {
-    // Update the data
-    getLocalData[editIndex] = data;
-    document.getElementById('f_name').removeAttribute('data-edit-index');
-} else {
-    // Add new data
-    getLocalData.push(data);
-}
-
-  
-        localStorage.setItem("userDetails",JSON.stringify(getLocalData))
+        document.getElementById('f_name_error').textContent = "";
+        document.getElementById('l_name_error').textContent = "";
+        document.getElementById('email_error').textContent = "";
+        document.getElementById('mobile_error').textContent = "";
 
      
-        displayData()
+        var isValid = true;
+
+        // Name validation (only letters)
+        const nameRegex = /^[A-Za-z]+$/;
+        if (!nameRegex.test(fName)) {
+          document.getElementById('f_name_error').textContent = "First name can contain only letters";
+          isValid = false;
+        }
+        if (!nameRegex.test(lName)) {
+          document.getElementById('l_name_error').textContent = "Last name can contain only letters";
+          isValid = false;
+        }
+
+        // Email validation
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailRegex.test(email)) {
+          document.getElementById('email_error').textContent = "Please enter a valid Email.";
+          isValid = false;
+        }
+
+  
+        const mobileRegex = /^[0-9]{10}$/;
+        if (!mobileRegex.test(mobile)) {
+          document.getElementById('mobile_error').textContent = " Enter a 10 digit Mobile number";
+          isValid = false;
+        }
+
+        if (!isValid) return;
+
+    
+        var data = {
+          firstName: fName,
+          lastName: lName,
+          email: email,
+          mobile: mobile
+        };
+
+        // Retrieve existing data from localStorage
+        var getLocalData = JSON.parse(localStorage.getItem("userDetails")) || [];
+        var editIndex = document.getElementById('f_name').getAttribute('data-edit-index');
+
+        if (editIndex !== null) {
+          // Update the data
+          getLocalData[editIndex] = data;
+          document.getElementById('f_name').removeAttribute('data-edit-index');
+        } else {
+          // Add new data
+          getLocalData.push(data);
+        }
+
+        // Store updated data in localStorage
+        localStorage.setItem("userDetails", JSON.stringify(getLocalData));
+
+        // Reset form inputs
+        document.getElementById('f_name').value = '';
+        document.getElementById('l_name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('mobile').value = '';
+
+        // Refresh table display
+        displayData();
       }
 
       function displayData() {
         var getLocalData = JSON.parse(localStorage.getItem("userDetails")) || [];
-
         var tableBody = document.getElementById('tableBody');
-        tableBody.innerHTML = ''; // Clear any existing rows
+        tableBody.innerHTML = ''; // Clear existing rows
 
-        getLocalData.forEach(function(user, index) {
+        getLocalData.forEach(function (user, index) {
           var row = `
             <tr>
               <td>${user.firstName}</td>
               <td>${user.lastName}</td>
               <td>${user.email}</td>
               <td>${user.mobile}</td>
-              <td><button type="button" onclick=edit(${index})>Edit</button>
-                <button type="button" onclick=deleterecord(${index})>Delete</button></td>
+              <td><button type="button" onclick="edit(${index})">Edit</button>
+                  <button type="button" onclick="deleterecord(${index})">Delete</button></td>
             </tr>
           `;
           tableBody.innerHTML += row;
         });
       }
-      function edit(index) {
-        console.log("index",index);
-        
-            var getLocalData = JSON.parse(localStorage.getItem("userDetails"));
-            var user = getLocalData[index];
-            console.log("user",user);
-        
-            
-            document.getElementById('f_name').value = user.firstName;
-            document.getElementById('l_name').value = user.lastName;
-            document.getElementById('email').value = user.email;
-            document.getElementById('mobile').value = user.mobile;
-            document.getElementById('f_name').setAttribute('data-edit-index', index);
-        }
 
-        // Function to delete a record
-        function deleterecord(index) {
-            var getLocalData = JSON.parse(localStorage.getItem("userDetails"));
-            getLocalData.splice(index, 1);
-            localStorage.setItem("userDetails", JSON.stringify(getLocalData));
-            displayData();
-        }
-        document.addEventListener('DOMcontentloaded', displayData);
+      function edit(index) {
+        var getLocalData = JSON.parse(localStorage.getItem("userDetails"));
+        var user = getLocalData[index];
+
+        // Populate input fields with selected user data
+        document.getElementById('f_name').value = user.firstName;
+        document.getElementById('l_name').value = user.lastName;
+        document.getElementById('email').value = user.email;
+        document.getElementById('mobile').value = user.mobile;
+
+        // Set the index for editing
+        document.getElementById('f_name').setAttribute('data-edit-index', index);
+      }
+
+      function deleterecord(index) {
+        var getLocalData = JSON.parse(localStorage.getItem("userDetails"));
+        getLocalData.splice(index, 1); // Remove the user from the array
+        localStorage.setItem("userDetails", JSON.stringify(getLocalData));
+        displayData(); // Refresh the table
+      }
+
+      // Load existing data when the page is loaded
+      document.addEventListener('DOMContentLoaded', displayData);
     </script>
   </body>
 </html>
