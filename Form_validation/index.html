@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
     <div class="bg">
-    <form class="form" id="form">
-       
-    <label>Name:</label>
-    <input type="text" id="uName">
-    <p class="error" id="uName_err"></p>
-    <label>Gender:<label>
-        <label>Male</label>
-        <input type="radio" id="male" name="gen" value="male">
-        <label>Female</label>
-        <input type="radio" id="female" name="gen" value="female">
-    <p class="error" id="errorMessage"></p>
-   
-    <label>Phone no.:<label>
-        <input type="text" id="uPhone">
-    <p class="error" id="uPhone_err"></p>
-            <label>Email id:<label>
-                <input type="text" id="uEmail">
-    <p class="error" id="uEmail_err"></p>
-                    <label>Password:<label>
-                        <input type="text" id="uPwd">
-    <p class="error" id="uPwd_err"></p>
-                            <label>Address:<label>
-                                <textarea id="uAdrs"></textarea>
-    <p class="error" id="uAdrs_err"></p>
-                                    <label>Pincode:<label>
-                                        <input type="text" id="uPin">
-    <p class="error" id="uPin_err"></p>
-                                            <label>Profile Image<label><br>
-                                            
-                                                <label>Select a file:</label>
-<input type="file" id="uFile">
-<p class="error" id="uFile_err"></p>
-                                                <button type="submit" onclick="validate()">Submit</button>
-                                                <p id="success"></p>
-                                             </form></div> 
-                                             <script src="validation.js"></script>
+        <form class="form" id="form">
+
+            <label>Name:</label>
+            <input type="text" id="uName">
+            <p class="error" id="uName_err"></p>
+            <label>Gender:<label>
+                    <label>Male</label>
+                    <input type="radio" id="male" name="gen" value="male">
+                    <label>Female</label>
+                    <input type="radio" id="female" name="gen" value="female">
+                    <p class="error" id="errorMessage"></p>
+
+                    <label>Phone no.:<label>
+                            <input type="text" id="uPhone">
+                            <p class="error" id="uPhone_err"></p>
+                            <label>Email id:<label>
+                                    <input type="text" id="uEmail">
+                                    <p class="error" id="uEmail_err"></p>
+                                    <label>Password:<label>
+                                            <input type="text" id="uPwd">
+                                            <p class="error" id="uPwd_err"></p>
+                                            <label>Address:<label>
+                                                    <textarea id="uAdrs"></textarea>
+                                                    <p class="error" id="uAdrs_err"></p>
+                                                    <label>Pincode:<label>
+                                                            <input type="text" id="uPin">
+                                                            <p class="error" id="uPin_err"></p>
+                                                            <label>Profile Image<label><br>
+
+                                                                    <label>Select a file:</label>
+                                                                    <input type="file" id="uFile">
+                                                                    <p class="error" id="uFile_err"></p>
+                                                                    <button type="submit"
+                                                                        onclick="validate()">Submit</button>
+                                                                    <p id="success"></p>
+        </form>
+    </div>
+    <script src="validation.js"></script>
 </body>
 
 </html>

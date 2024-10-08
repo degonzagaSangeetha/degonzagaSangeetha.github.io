@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Car {
+            constructor(name, number) {
+                this.name = name;
+                this.number = number;
+            }
+            getDetails() {
+                return (`The name of the Car is ${this.name}.`)
+            }
+        }
+
+        let Car1 = new Car('Audi', 'PY1340');
+        let Car2 = new Car('Ford', 'FR9981');
+
+        console.log(Car1.number);
+        console.log(Car2.number);
+        console.log(Car1.getDetails());
+        console.log(Car2.getDetails());
+
+
+        //polymorphism
+
+        class Shape {
+            area(x, y) {
+                console.log(x * y);
+            }
+        }
+        class Square extends Shape {
+            area(a, b) {
+                console.log('area of Square')
+
+                super.area(a, b);
+
+            }
+        }
+        let area_square = new Square();
+        let output = area_square.area(10, 20);
+    </script>
+</body>
+
+</html>

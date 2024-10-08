@@ -1,4 +1,6 @@
 function validate() {
+    console.log("working");
+    
     let isValid = true;
 
     // Get input values
@@ -118,7 +120,7 @@ function validate() {
     return isValid; // Return the validity status
 }
 
-*
+
 document.getElementById("form").addEventListener("submit", function(event) {
     if (!validate()) {
         event.preventDefault(); // Prevent form submission if validation fails

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Spread Operator
+        let arr=['a','b','c']
+        let arr1= [...arr] //using spread operator does not affect the existing array
+        arr1.push('d')
+        console.log(arr)
+        console.log(arr1);
+                // Rest parameter
+                function fun(...input){
+                    let sum=0;
+                    for(let i of input)
+                {
+                    sum+=i;
+                }
+                return sum;
+                }
+                console.log(fun(1,2,3,4,5));//with rest parameter we can give many inputs, not fixed
+                
+    </script>
+</body>
+</html>
